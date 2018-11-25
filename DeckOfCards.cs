@@ -10,8 +10,8 @@ public static class Program {
 		string[] suits = { "Spades", "Clubs", "Hearts", "Diamonds" };
 		
 		var deck = from card in cards
-			         from suit in suits
-			         select $"{card} of {suit}";
+			       from suit in suits
+			       select $"{card} of {suit}";
 		
 		var random = new Random();
 		var shuffledDeck = deck.OrderBy(card => random.Next()).ToList(); // Use a list to preserve order.
