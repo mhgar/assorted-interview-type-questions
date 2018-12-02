@@ -8,8 +8,8 @@ using System.Linq;
 public static class Program {
     public static (int High, int Low) HighLowSum(int[] numbers) {
         var sorted = numbers.OrderBy(x => x);
-        var highSum = sorted.Skip(1).Sum(x => x);
-        var lowSum = sorted.Reverse().Skip(1).Sum(x => x);
+        var highSum = sorted.Skip(1).Sum();
+        var lowSum = sorted.Reverse().Skip(1).Sum();
         
         return (highSum, lowSum);
     }
